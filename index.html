@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050c17">
+<title>Entre estrellas y casualidades</title>
+<link rel="stylesheet" href="css/styles.css?v=15">
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <button class="brand brand-button" data-view="inicio" aria-label="Ir al inicio">
+        <span class="brand-mark"><img src="assets/images/branding/logo-mi-principe.svg" alt="Logo Mi Príncipe"></span>
+        <span class="brand-copy">
+          <strong>Entre estrellas</strong>
+          <small>para mi príncipe</small>
+        </span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Navegación principal">
+        <button data-view="inicio" class="active"><span class="nav-icon">⌂</span><span>Inicio</span></button>
+        <button data-view="recuerdos"><span class="nav-icon">◫</span><span>Fotos y videos</span></button>
+        <button data-view="dedicatorias"><span class="nav-icon">✧</span><span>Dedicatorias</span></button>
+        <button data-view="conversaciones"><span class="nav-icon">✉</span><span>Conversaciones</span></button>
+        <button data-view="historia"><span class="nav-icon">✦</span><span>Historia</span></button>
+        <button data-view="dalas"><span class="nav-icon">🦊</span><span>Dalas</span></button>
+        <button data-view="carta"><span class="nav-icon">♡</span><span>Carta</span></button>
+        <button data-view="secretos"><span class="nav-icon">☾</span><span>Secretos</span></button>
+      </nav>
+
+      <div class="topbar-side">
+        <span class="topbar-note">mi niño · mi príncipe</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="view active" id="view-inicio">
+      <div class="hero">
+        <div class="hero-image"><img src="assets/images/story/hero.png" alt=""></div>
+        <div class="hero-copy">
+          <div class="hero-inner">
+            <div class="hero-logo-wrap">
+              <img class="hero-logo" src="assets/images/branding/logo-mi-principe.svg" alt="Logo Mi Príncipe">
+              <div class="hero-logo-text">
+                <span>Mi Príncipe</span>
+                <small>un rincón hecho por tu niño</small>
+              </div>
+            </div>
+            <div class="kicker">De tu niño · para mi príncipe</div>
+            <h1>Entre<br>estrellas y<br>casualidades</h1>
+            <p class="lead">Esta no es solamente una página. Es una pequeña colección de todo lo que todavía conservo de nosotros: mensajes, fotos, videos, recuerdos, dibujos, apodos y momentos que empezaron mucho antes de los archivos que aún tengo.</p>
+            <p class="muted">Sí, me gustaría que fueras algo más. También sé que eres hetero y lo respeto. Nada de esto intenta cambiarte; solo quería guardar de una forma bonita lo importante que eres para mí.</p>
+            <div class="home-actions">
+              <button class="home-card" data-view="recuerdos"><b>📷 Fotos y videos</b><span>Todo el material que todavía quedó en los dos chats, separado entre lo que enviaste tú y lo que envié yo.</span></button>
+              <button class="home-card" data-view="dedicatorias"><b>✧ Dedicatorias</b><span>Las fotos y videos que descargué o hice para dedicarte: unas te las envié y otras se quedaron guardadas para ti.</span></button>
+              <button class="home-card" data-view="conversaciones"><b>💬 Conversaciones</b><span>Los mensajes y momentos que más significado terminaron teniendo.</span></button>
+              <button class="home-card" data-view="historia"><b>✨ Nuestra historia</b><span>Desde lo que todavía puedo recordar hasta “mi niño”, “mi príncipe” y el cambio de número.</span></button>
+              <button class="home-card" data-view="dalas"><b>🦊 Dalas</b><span>El zorro, las estrellas y todo lo que terminó convirtiéndose en símbolo.</span></button>
+              <button class="home-card" data-view="carta"><b>💌 Una carta</b><span>La parte que quería que leyeras con más calma.</span></button>
+              <button class="home-card" data-view="secretos"><b>🌙 Cosas ocultas</b><span>Porque obviamente iba a esconderte algunas cosas para que las descubrieras.</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-recuerdos">
+      <div class="content media-page">
+        <div class="media-hero">
+          <div class="media-hero-copy">
+            <div class="kicker">Nuestro archivo visual</div>
+            <h2>Fotos y videos</h2>
+            <p class="lead">No es una carpeta de WhatsApp. Es una selección de momentos que sí vale la pena volver a mirar.</p>
+
+            <div class="media-summary">
+              <div class="media-summary-item">
+                <strong id="mediaPhotoCount">0</strong>
+                <span>fotos</span>
+              </div>
+              <div class="media-summary-item">
+                <strong id="mediaVideoCount">0</strong>
+                <span>videos</span>
+              </div>
+              <div class="media-summary-item">
+                <strong id="mediaTotalCount">0</strong>
+                <span>recuerdos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="media-featured" id="mediaFeatured">
+            <div class="media-featured-shade"></div>
+            <div class="media-featured-content">
+              <span>Recuerdo destacado</span>
+              <strong id="featuredMediaTitle">Un momento guardado</strong>
+              <button id="featuredMediaButton">Ver recuerdo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-toolbar">
+          <div class="media-search-wrap">
+            <span>⌕</span>
+            <input id="mediaSearch" type="search" placeholder="Buscar por fecha, príncipe, tu niño o descripción...">
+          </div>
+
+          <div class="media-segmented" id="mediaTypeFilters">
+            <button class="active" data-filter="all">Todo</button>
+            <button data-filter="image">Fotos</button>
+            <button data-filter="video">Videos</button>
+          </div>
+        </div>
+
+        <div class="media-subtoolbar">
+          <div class="media-owner-filters" id="mediaOwnerFilters">
+            <button class="active" data-owner="all">Todos</button>
+            <button data-owner="david">Príncipe 👑</button>
+            <button data-owner="niko">Tu niño 🤍</button>
+          </div>
+          <div class="media-results" id="mediaResultsText">Mostrando recuerdos</div>
+        </div>
+
+        <div class="media-section-title">
+          <div>
+            <span class="eyebrow">Galería</span>
+            <h3>Momentos guardados</h3>
+          </div>
+          <button class="media-shuffle" id="mediaShuffle">Sorpréndeme ✦</button>
+        </div>
+
+        <div class="professional-gallery" id="mediaGrid"></div>
+
+        <div class="media-empty hidden" id="mediaEmpty">
+          <div>✦</div>
+          <h3>No encontré recuerdos con ese filtro</h3>
+          <p>Prueba con otra búsqueda o vuelve a mostrar todo.</p>
+        </div>
+      </div>
+    
+    </section>
+
+    <section class="view" id="view-dedicatorias">
+      <div class="content dedication-page">
+        <div class="dedication-hero">
+          <div class="dedication-copy">
+            <div class="kicker">Lo que guardé para dedicarte</div>
+            <h2>Dedicatorias</h2>
+            <p class="lead">Aquí están las fotos y videos que descargué, guardé o hice pensando en ti. Algunas sí te las envié. Otras no. Pero todas terminaron aquí porque en algún momento sentí que eran para ti.</p>
+            <p class="muted">También acomodé y normalicé varias para que se vieran mejor en la página.</p>
+
+            <div class="dedication-stats">
+              <div class="dedication-stat"><strong id="dedPhotoCount">0</strong><span>fotos</span></div>
+              <div class="dedication-stat"><strong id="dedVideoCount">0</strong><span>videos</span></div>
+              <div class="dedication-stat"><strong id="dedTotalCount">0</strong><span>detalles</span></div>
+            </div>
+          </div>
+
+          <div class="dedication-feature" id="dedicationFeature">
+            <div class="dedication-feature-shade"></div>
+            <div class="dedication-feature-content">
+              <span>Para mi príncipe</span>
+              <strong id="dedicationFeatureTitle">Algo que guardé para ti</strong>
+              <button id="dedicationFeatureBtn">Abrir recuerdo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dedication-toolbar">
+          <div class="media-search-wrap">
+            <span>⌕</span>
+            <input id="dedicationSearch" type="search" placeholder="Buscar en las dedicatorias...">
+          </div>
+          <div class="media-segmented" id="dedicationTypeFilters">
+            <button class="active" data-filter="all">Todo</button>
+            <button data-filter="image">Fotos</button>
+            <button data-filter="video">Videos</button>
+          </div>
+        </div>
+
+        <div class="media-section-title">
+          <div>
+            <span class="eyebrow">Archivo especial</span>
+            <h3>Lo que alguna vez quise dedicarte</h3>
+          </div>
+          <button class="media-shuffle" id="dedicationShuffle">Muéstrame algo ✦</button>
+        </div>
+
+        <div class="professional-gallery" id="dedicationGrid"></div>
+        <div class="media-empty hidden" id="dedicationEmpty">
+          <div>✦</div>
+          <h3>No encontré nada con ese filtro</h3>
+          <p>Prueba con otro tipo o con otra búsqueda.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-conversaciones">
+      <div class="content">
+        <div class="section-head"><div class="text"><div class="kicker">Lo que sí se quedó</div><h2>Conversaciones importantes</h2><p class="lead">Ahora sí está mucho más completo: apodos, “te quiero”, buenos días, buenas noches, preocupación, apoyo, orgullo y esas frases que probablemente ni recordábamos que estaban ahí.</p></div></div>
+        <div class="conversation-tools">
+          <input id="conversationSearch" class="conversation-search" type="search" placeholder="Buscar: melocotón, te quiero, ángel, buenos días...">
+          <span class="stat" id="conversationCount"></span>
+        </div>
+        <div class="convo-grid" id="conversationGrid"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-historia">
+      <div class="content">
+        <div class="kicker">Mucho antes del sitio</div>
+        <h2>Una historia incompleta,<br>pero nuestra.</h2>
+        <p class="lead">No tengo los primeros mensajes. Por eso esta línea de tiempo no pretende decir cuándo comenzó todo; solo reúne las partes que todavía puedo demostrar y las que se quedaron conmigo.</p>
+        <div class="timeline" id="timeline"></div>
+        <div class="story-art">
+          <img src="assets/images/story/journey.png" alt="">
+          <div class="story-caption"><div class="kicker">Seguir caminando</div><h2>Con días buenos, días raros y un montón de “¿ya comiste?”</h2></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-dalas">
+      <div class="content">
+        <div class="dalas-layout">
+          <div class="dalas-img"><img src="assets/images/featured/dalas_amalakay.jpeg" alt=""></div>
+          <div>
+            <div class="kicker">Dalas</div>
+            <h2>Cuando un recuerdo se volvió símbolo.</h2>
+            <p class="lead">El zorro, el niño, la coronita, las estrellas y todo lo que fui creando terminaron guardando una parte de lo que siento por ti. No porque una historia dibujada pueda definirnos, sino porque a veces una imagen explica cosas que uno no sabe decir.</p>
+            <p class="muted">Dalas puede representar cariño, aprendizaje, cercanía y también esa parte melancólica de querer a alguien sabiendo que no necesariamente puede quererte de la misma forma.</p>
+          </div>
+        </div>
+        <div class="story-art">
+          <img src="assets/images/story/finale.png" alt="">
+          <div class="story-caption"><div class="kicker">Y aun así</div><h2>“Vamos a salir adelante los dos.”</h2></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-carta">
+      <div class="content letter-page-v15">
+        <div class="letter-section-head">
+          <div class="kicker">Palabras que quedaron guardadas</div>
+          <h2>Cartas para mi príncipe.</h2>
+          <p class="lead">Hay cosas que uno escribe en momentos distintos de la vida. No todas nacieron desde el mismo lugar, pero todas fueron sinceras cuando las escribí.</p>
+        </div>
+
+        <div class="letter-tabs" role="tablist" aria-label="Elegir carta">
+          <button class="letter-tab active" data-letter-tab="actual">La carta de esta página 🤍</button>
+          <button class="letter-tab" data-letter-tab="brasil">La que escribí al venirme a Brasil 🇧🇷</button>
+        </div>
+
+        <div class="letter-panel active" data-letter-panel="actual">
+          <div class="letter-wrap">
+            <div class="kicker">Para leer con calma</div>
+            <h3>Una carta de tu niño.</h3>
+            <p class="muted">Toca el sobre.</p>
+            <div class="envelope" id="envelope"></div>
+            <article class="letter" id="letter">
+              <p>Príncipe:</p>
+              <p>Probablemente ya te he dicho muchas de estas cosas de mil formas distintas, porque si algo queda claro viendo nuestros mensajes es que soy incapaz de quedarme callado contigo jajaja.</p>
+              <p>Te he dicho que te quiero cuando estoy feliz contigo, cuando me sacas el malgenio, cuando estás bien y especialmente cuando sé que no lo estás. Y después de todo este tiempo sigo pensando lo mismo: quiero verte bien.</p>
+              <p>Pero también quiero ser sincero contigo en algo. No voy a fingir que nunca he querido algo más, porque sabes perfectamente que sí. Si las cosas fueran diferentes y tú sintieras lo mismo, probablemente te escogería sin pensarlo demasiado. Me gustaría poder llamarte mi novio además de mi príncipe.</p>
+              <p>Pero también sé que eres hetero. Y respeto eso.</p>
+              <p>No hice esto para intentar cambiarte, convencerte, hacerte sentir culpable ni hacerte creer que me debes una oportunidad. No quiero que mi cariño se convierta en una presión para ti.</p>
+              <p>A veces puede doler querer a alguien de una forma que esa persona no puede devolverte, pero eso no borra todo lo bonito que sí existe. Sigues siendo mi amigo. Sigues siendo alguien a quien quiero muchísimo. Y prefiero tenerte en mi vida desde un lugar real que perderte intentando convertir esto en algo que no puedes sentir.</p>
+              <p>No sé dónde va a estar cada uno dentro de unos años. Solo sé que conocerte dejó cosas muy bonitas en mí.</p>
+              <p>Tal vez no conserve nuestro primer mensaje. Tal vez se hayan perdido un montón de conversaciones. Pero entre todo lo que sí quedó hay dos palabras que terminaron diciendo muchísimo: <strong>mi niño</strong> y <strong>mi príncipe</strong>.</p>
+              <p>Y aunque a veces mi corazón quisiera poder llamarte de otra forma, nunca quiero que olvides que también valoro muchísimo poder llamarte <strong>mi amigo</strong>.</p>
+              <p>Gracias por dejarme ser tu niño.</p>
+              <p class="sign">Te quiero muchísimo, príncipe.<br><strong>— Tu niño 🤍</strong></p>
+            </article>
+          </div>
+        </div>
+
+        <div class="letter-panel" data-letter-panel="brasil">
+          <div class="brazil-letter-intro">
+            <span class="brazil-letter-stamp">Brasil · una carta de despedida</span>
+            <h3>La carta que te escribí cuando me vine.</h3>
+            <p>Esta carta pertenece a ese momento exacto. La dejo aquí como la escribí, porque también forma parte de nuestra historia y de todo lo que sentía antes de irme.</p>
+          </div>
+          <article class="brazil-letter">
+            <div class="brazil-letter-stars">✦ · ☾ · ✦</div>
+            <p>Amor de mi vida:</p>
+<p>No sé ni cómo empezar esta carta, porque nunca imaginé que algún día tendría que escribirte una. Hay personas que llegan para quedarse un momento, y hay otras que llegan para cambiarte la vida… tú fuiste eso para mí. Fuiste hogar, calma, alegría y también el lugar donde aprendí a amar de verdad.</p>
+<p>Dicen que las personas pasan por nuestra vida por alguna razón, y sé que tú tuviste un propósito en la mía: enseñarme a amar de verdad, incluso cuando amar también dolía.</p>
+<p>Me aferré a la idea de que siempre estaría para ti y que nunca me iría de tu lado. No te voy a mentir, siempre me imaginé haciendo una vida contigo. Tal vez me apresuré al pensar que así sería, pero créeme que, desde que te conocí, mi intención siempre fue que fueras mi último amor.</p>
+<p>Gracias por cada conversación hasta tarde, por cada “mi niño”, por cada “mi Niko”, por preocuparte cuando me sentía mal y por dejarme preocuparme por ti también. Gracias por permitirme cuidarte, aunque fuera un poquito. Nunca voy a olvidar las veces que solo quería saber si ya habías comido, si te habías tomado las pastillas, si estabas descansando o si habías llegado bien a casa. Puede sonar pequeño, pero para mí eso era amar.</p>
+<p>Nunca voy a olvidar tu voz, tu manera de hablarme, tus mensajes llenos de errores ortográficos que tanto molestaba jugando, ni tampoco la forma en que lograste convertirte en parte de mis días sin siquiera darme cuenta.</p>
+<p>Muchas veces ambos dijimos e hicimos cosas que nos lastimaron, algunas veces sin querer y otras desde el dolor. Yo también tuve miedo, inseguridades y momentos donde sentía que no era prioridad para ti, aunque en el fondo entendiera todo lo que cargabas encima. Y, aun así, nunca pude dejar de escogerte.</p>
+<p>Porque incluso cuando estábamos mal, yo seguía pensando en ti apenas despertaba. Seguía queriendo verte, aunque fueran cinco minutos. Seguía buscando cómo ayudarte incluso cuando yo tampoco estaba bien. Y no me arrepiento de nada de eso.</p>
+<p>Desde el inicio hubo una conexión especial e inigualable que, al menos de mi parte, no creo volver a encontrar en otra persona. Tú llegaste a una parte de mí donde casi nadie había llegado.</p>
+<p>Me duele aceptar que a veces amar no es suficiente para quedarse. Y aunque quisiera detener el tiempo y volver a tantos momentos contigo, entiendo que hay despedidas que llegan incluso cuando el corazón no está listo. Créeme que, si pudiera elegir, te seguiría escogiendo a ti una y otra vez.</p>
+<p>Nunca quise que nuestro vínculo llegara a su fin. Siempre, y tú lo sabes, te amé de verdad.</p>
+<p>Agradezco cada momento que compartiste conmigo, cada palabra, cada abrazo y cada parte de ti que dejaste en mi vida. Y aunque hoy me toque soltarte, quiero que sepas que contigo también se va un pedazo de mi alma.</p>
+<p>Quiero que sepas que jamás fuiste un error en mi vida. Al contrario, fuiste de las cosas más bonitas que me han pasado. Gracias por enseñarme que todavía existían personas capaces de hacer sentir tanto con tan solo existir.</p>
+<p>Ojalá la vida te abrace bonito. Ojalá cumplas todos tus sueños, que sonrías mucho y que alguien te cuide siempre cuando yo ya no pueda hacerlo. Y si algún día piensas en mí, espero que sea con cariño, porque yo voy a recordarte como el amor más grande que tuve.</p>
+<p>Te amé más de lo que supe demostrar.</p>
+<p>Y probablemente te voy a extrañar más de lo que puedo explicar.</p>
+<p>Y como último acto de amor hacia ti, no quiero que me pagues nada de lo que me debes. No te voy a aceptar ni un peso, porque todo lo que hice por ti lo hice desde el amor y nunca esperando algo a cambio.</p>
+<p>Quédate con eso tranquilo. Si alguna vez te ayudé, cuidé de ti o estuve para ti, créeme que jamás me voy a arrepentir. Para mí siempre valió la pena haberte amado.</p>
+<p>Ese será mi último regalo para ti… dejarte ir sin deberme nada, excepto el recuerdo de todo lo que vivimos.</p>
+<p>Y aunque esta despedida me rompa por dentro, prefiero quedarme con todo lo bonito que vivimos antes que convertir el amor que te tengo en recuerdos llenos de rencor. Nunca voy a hablar mal de ti, porque incluso en nuestros peores momentos seguías siendo la persona que más quería cuidar.</p>
+<p>Tal vez en otra vida, en otro tiempo o en otras circunstancias, nos habría ido diferente. Me gusta pensar que existió un universo donde sí pudimos quedarnos juntos, donde todo salió bien y donde nunca tuvimos que decirnos adiós.</p>
+<p>Quiero que seas feliz, incluso si esa felicidad ya no me incluye a mí. Porque amar también es aprender a soltar cuando el corazón entiende que insistir solo termina destruyendo lo que un día fue hermoso.</p>
+<p>Y si algún día vuelves a leer esta carta, quiero que recuerdes algo: hubo alguien que te amó con todo lo que tenía, incluso cuando no sabía cómo hacerlo perfectamente.</p>
+<p>Hubo alguien que habría hecho cualquier cosa por verte sonreír, alguien que siempre iba a contestarte, aunque estuviera destruido por dentro, alguien que incluso en sus peores días encontraba paz escuchando tu voz.</p>
+<p>Y hay algo que probablemente nunca te dije por completo… yo sí quería pasar este último tiempo contigo. Aunque fuera un solo día. Un último día donde pudiéramos estar tranquilos, solos tú y yo, sin problemas, sin interrupciones, sin el mundo cayéndose encima de nosotros. Solo quería abrazarte una vez más sin sentir que el tiempo nos estaba persiguiendo.</p>
+<p>Quería verte, escucharte hablar de cualquier cosa, molestarte por tus errores al escribir, recostarme contigo y sentir, aunque fuera por unas horas, que todavía existíamos de la forma en que alguna vez fuimos felices.</p>
+<p>También me duele pensar en todas las cosas que no alcanzamos a hacer. Nunca visitamos esos pueblitos que decíamos conocer juntos. Nunca pasamos noches enteras jugando en la play como queríamos. Nunca vimos todas esas películas que prometimos ver. Nunca tuvimos ese montón de pequeños momentos simples que yo imaginaba contigo y que, para mí, habrían significado el mundo entero.</p>
+<p>Y aunque nunca te lo dije directamente, muchas veces me quedé esperando un mensaje tuyo diciendo “¿estás en tu casa? te quiero ir a ver” o un “ya estoy afuera, sal”. Me imaginaba tantas veces ese momento… abrir la puerta y encontrarte ahí, aunque fuera solo unos minutos.</p>
+<p>Pero en el fondo creo que siempre supe que eso no iba a pasar.</p>
+<p>Y aun así seguía esperando.</p>
+<p>Porque una parte de mí nunca dejó de ilusionarse contigo, nunca dejó de querer un último momento real a tu lado. Uno donde pudiéramos olvidarnos, aunque fuera un rato de todo lo malo y simplemente volver a ser nosotros… (Aunque no hubiera un nosotros).</p>
+<p>Y ahora siento que simplemente… se nos acabó el tiempo.</p>
+<p>Poco a poco fui desistiendo de la idea de pedirte vernos. Veía tu horario tan pesado, todos los problemas que cargabas, todo el cansancio que llevabas encima… y no quise convertirme en otra preocupación más para ti. Me dolió muchísimo quedarme callado y hacerme a la idea de que tal vez nunca iba a tener ese último momento contigo que tanto soñaba.</p>
+<p>Y creo que eso es lo que más me rompe el alma… irme así.</p>
+<p>Irme con tantas ganas de haberte abrazado una última vez. Con tantas cosas que todavía quería vivir contigo, aunque fuera por un instante más. Porque, aunque intenté hacerme fuerte, una parte de mí todavía seguía esperando que aparecieras y me dijeras que me quedara un poquito más a tu lado.</p>
+<p>Y, aun así, después de todo, no quiero desaparecer completamente de tu vida. No te voy a bloquear ni cerrarte la puerta de mí, porque, sigues siendo alguien demasiado importante para mí.</p>
+<p>Si algún día necesitas ayuda, si algún día te sientes solo, si necesitas hablar con alguien o simplemente quieres encontrar un amigo en medio del caos… siempre puedes contar conmigo. No importa si estoy lejos, si estoy en otro país o si la vida nos llevó por caminos distintos. Si algún día me necesitas, yo voy a estar ahí para ti.</p>
+<p>Porque hay amores que no terminan cuando las personas se alejan… hay amores que se quedan viviendo dentro de uno, respirando bajito entre los recuerdos, en las canciones, en las noches difíciles y en todo aquello que alguna vez nos hizo sentir vivos. Y tú… tú te quedaste en mí de una forma que ya no tiene regreso.</p>
+<p>A veces siento que terminamos convirtiéndonos en eso que todavía no he sido capaz de dedicarte completamente… “The One That Got Away”.</p>
+<p>Y creo que esa canción me duele tanto porque, en el fondo, tengo miedo de que te conviertas en eso para mí. En la persona que amaré toda mi vida, aunque ya no esté. En ese amor que uno recuerda incluso años después, preguntándose qué habría pasado si las cosas hubieran sido diferentes.</p>
+<p>Quería dedicarte esa canción porque hay partes de ella que se sienten demasiado parecidas a nosotros. A todo lo que no alcanzamos a vivir. A todos los planes que se quedaron suspendidos en el tiempo. Y porque, aunque nunca te lo dije directamente, una parte de mí siempre creyó que tú eras esa persona con la que quería quedarme hasta el final.</p>
+<p>Y tal vez por eso también alguna vez te dediqué “Te juro no te miento”, porque no había canción que explicara mejor todo lo que sentía por ti. Porque de verdad te juro que contigo imaginé todo. Un futuro, una vida, un hogar, viajes, noches juntos, despertar contigo, envejecer contigo… incluso en los momentos donde parecía imposible, yo seguía soñándonos.</p>
+<p>Nunca fue mentira lo que sentí por ti. Nunca fue algo pasajero.</p>
+<p>Nunca fuiste alguien más.</p>
+<p>Fuiste tú… siempre tú.</p>
+<p>Supongo que por eso me duele tanto soltarte… porque no siento que esté perdiendo solo a alguien que amo. Siento que estoy dejando ir a la persona con la que imaginé una vida entera.</p>
+<p>Siempre voy a llevarte conmigo. No solo en mi memoria ni en mi corazón… también en mi piel. Me hice un tatuaje que dice “Dalas”, la mezcla de nuestros nombres, acompañado de un principito. Y no sabes cuánto me dolió y me alivió al mismo tiempo hacerlo, porque entendí que, aunque el mundo nos separara, yo nunca iba a dejar de sentirte parte de mí.</p>
+<p>Quizás algún día alguien vea ese tatuaje y no entienda lo que significa. Pero yo sí lo voy a saber. Voy a saber que ahí quedó una parte del amor más sincero que he sentido en mi vida. Ahí quedó la historia de un niño que llegó a cambiarme el alma sin darse cuenta.</p>
+<p>Y como siempre te digo… ojalá algún día encuentres a alguien mejor que yo. Alguien que te ame muchísimo más de lo que yo pude hacerlo, que te cuide mejor, que tenga la capacidad de darte toda la tranquilidad y felicidad que mereces.</p>
+<p>Ojalá encuentres a alguien que de verdad te guste con la misma intensidad con la que yo te quise a ti. Alguien que haga hasta lo imposible por verte feliz, que te abrace en tus peores días, que se quede incluso cuando todo se vuelva difícil y que nunca te haga sentir solo.</p>
+<p>Y sí… incluso así me digas que ya no crees en el amor.</p>
+<p>Porque yo sí creo que algún día alguien va a llegar a tu vida y va a demostrarte que todavía existen amores bonitos, tranquilos y sinceros. Alguien que te haga sentir amado de la manera correcta, sin dolor, sin miedo y sin tantas heridas de por medio.</p>
+<p>Porque si algo tengo claro, es que tú nunca mereciste recibir lo mínimo de nadie.</p>
+<p>Mereces un amor bonito, uno sincero, uno que te cuide el corazón con delicadeza. Mereces lo mejor de este mundo y muchísimo más.</p>
+<p>Y aunque me rompa un poco pensar que quizás algún día será otra persona quien te dé todo eso… aun así espero que la vida te regale exactamente el amor que siempre soñaste.</p>
+<p>Porque para el mundo podrás ser muchas cosas… pero para mí siempre vas a ser mi principito adorado.</p>
+<p>Y creo que eso es lo más triste de todo… entender que, incluso aprendiendo a soltarte, nunca voy a dejar de pertenecerte un poquito.</p>
+<p>Adiós, mi principito… recuerda que estás hecho para conquistar el mundo…</p>
+<p>Espero que te guste 😊</p>
+<figure class="brazil-letter-image">
+          <img src="assets/images/letters/carta-brasil-dalas.png" alt="Tatuaje Dalas con el Principito">
+          <figcaption>Una parte de esta historia que también quedó en mi piel.</figcaption>
+        </figure>
+<p>Hubiera querido que fueras tú la persona que se quedara conmigo al final de todo.</p>
+<p>Y creo que eso es lo que más me duele… aceptar que tenía tantos planes contigo, mientras la vida poco a poco nos iba alejando sin que pudiéramos detenerlo.</p>
+<p>Porque aunque trate de hacerme el fuerte, la verdad es que yo sí te veía en mi futuro. Sí te imaginaba en mi vida por muchísimo tiempo más.</p>
+<p>Pero supongo que no todos los amores que se sienten como hogar terminan convirtiéndose en un lugar donde uno puede quedarse para siempre.</p>
+<p>Y te voy a extrañar muchísimo… más de lo que probablemente imaginas.</p>
+<p>Así como te extrañé todos estos meses donde te sentí tan ausente, tan lejos de mí, incluso cuando todavía seguíamos hablando. Extrañaba al niño que me hablaba bonito, al que me buscaba, al que me hacía sentir querido aunque fuera con cosas pequeñas.</p>
+<p>Extrañaba a mi príncipe.</p>
+<p>Y perdón si alguna vez te hice sentir presionado por querer pasar más tiempo contigo o por querer sentirte más cerca. La verdad es que nunca fue por molestarte… era solo que te amaba demasiado y me estaba costando aceptar que poco a poco te sentía irte de mis manos.</p>
+<p>Creo que una parte de mí llevaba tiempo sintiendo esta despedida, pero mi corazón nunca quiso aceptarla del todo.</p>
+<p>Porque incluso ahora, incluso escribiendo todo esto… todavía hay una parte de mí que quisiera quedarse contigo.</p>
+            <div class="brazil-letter-end">— Guardada desde aquel momento 🇧🇷</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-secretos">
+      <div class="content">
+        <div class="kicker">Tu rincón secreto · cambia todos los días</div>
+        <h2>Hay algo nuevo para ti cada día ✨</h2>
+        <p class="lead">Esta parte de la página está hecha especialmente para que puedas volver. <strong>Todos los días aparece algo diferente para ti</strong>: a veces será un recuerdo de nuestros chats, otras un “te quiero”, un regaño para que comas, algo sobre Dalas, una tontería nuestra o simplemente algo que quiero que recuerdes ese día.</p>
+        <p class="muted">No tienes que avisarme cuando entres ni responder nada. Es tu pequeño rincón. Solo vuelve cuando quieras descubrir qué te tocó hoy.</p>
+
+        <div class="daily-secret-count">Hay 125 secretos distintos guardados para ti · uno cambia cada día</div>
+        <div class="daily-secret-card" id="dailySecretCard">
+          <div class="daily-secret-date" id="dailySecretDate"></div>
+          <div class="daily-secret-lock" id="dailySecretLock">
+            <div class="daily-secret-icon">🔒</div>
+            <h3>Hay algo para ti hoy</h3>
+            <p>Solo se puede descubrir una vez que lo toques.</p>
+            <button class="daily-secret-button" id="dailySecretButton">Descubrir el secreto ✨</button>
+          </div>
+          <div class="daily-secret-content hidden" id="dailySecretContent">
+            <div class="daily-secret-emoji" id="dailySecretEmoji"></div>
+            <div class="daily-secret-title" id="dailySecretTitle"></div>
+            <p class="daily-secret-text" id="dailySecretText"></p>
+            <div class="daily-secret-sign">— tu niño 🤍</div>
+          </div>
+        </div>
+
+        <div class="daily-hint">
+          <span>☾</span>
+          <p><strong>Dato importante:</strong> el secreto se calcula con la fecha del dispositivo, así que cambia automáticamente al comenzar un nuevo día.</p>
+        </div>
+
+        <div class="kicker" style="margin-top:64px">Y porque uno solo no era suficiente</div>
+        <h2 style="font-size:clamp(2rem,5vw,3.4rem)">Pequeños secretos permanentes.</h2>
+        <div class="secret-grid">
+          <div class="secret"><button>NO TOCAR 🚫</button><div class="answer">¿En serio? 🙄<br><br>Te dije que no lo tocaras.<br><br><span style="color:var(--gold2)">Te quiero muchísimo, príncipe.</span></div></div>
+          <div class="secret"><button>Una estrella ★</button><div class="answer">No eres una carga. Si alguna vez te ayudo es porque quiero hacerlo, no porque me toque.</div></div>
+          <div class="secret"><button>Otra más ✦</button><div class="answer">Si te caes, te ayudo a levantarte. Después seguimos caminando.</div></div>
+          <div class="secret"><button>¿Mi niño? 🤍</button><div class="answer">La primera vez que lo encuentro guardado fue el 6 de noviembre de 2025. Y terminó quedándose.</div></div>
+          <div class="secret"><button>¿Mi príncipe? 👑</button><div class="answer">Unos días después apareció mi forma de llamarte a ti. Ya sabes que tampoco se fue.</div></div>
+          <div class="secret"><button>Última ✨</button><div class="answer">No sé qué vaya a cambiar con los años. Pero sí sé que fuiste alguien demasiado importante en esta etapa de mi vida.</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">×</button>
+  <div class="lightbox-inner">
+    <div class="lightbox-media" id="lightboxMedia"></div>
+    <div class="lightbox-info"><strong id="lightboxTitle"></strong><span id="lightboxCaption"></span></div>
+  </div>
+</div>
+
+<script src="data/media.js?v=14"></script>
+<script src="data/conversations.js?v=14"></script>
+<script src="data/secrets.js?v=14"></script>
+<script src="data/dedicatorias.js?v=14"></script>
+<script src="js/app.js?v=15"></script>
+</body>
+</html>

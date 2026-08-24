@@ -1,0 +1,22 @@
+LIMPIEZA DE DUPLICADOS V5
+
+Elementos eliminados como duplicados:
+- assets/media/niko/videos/antiguo_00003637-VIDEO-2025-12-18-21-17-14.mp4  --> conservado: assets/media/niko/videos/antiguo_00003636-VIDEO-2025-12-18-21-17-03.mp4
+- assets/media/niko/videos/antiguo_00003660-VIDEO-2025-12-20-20-30-20.mp4  --> conservado: assets/media/niko/videos/antiguo_00003659-VIDEO-2025-12-20-20-30-17.mp4
+- assets/media/niko/videos/antiguo_00003795-VIDEO-2025-12-24-19-58-00.mp4  --> conservado: assets/media/niko/videos/antiguo_00003794-VIDEO-2025-12-24-19-57-57.mp4
+- assets/media/niko/videos/antiguo_00005396-VIDEO-2026-01-30-19-28-48.mp4  --> conservado: assets/media/niko/videos/antiguo_00005395-VIDEO-2026-01-30-19-28-43.mp4
+- assets/media/niko/videos/antiguo_00005399-VIDEO-2026-01-30-19-49-36.mp4  --> conservado: assets/media/niko/videos/antiguo_00005398-VIDEO-2026-01-30-19-49-26.mp4
+- assets/media/niko/videos/antiguo_00006407-VIDEO-2026-02-11-11-47-15.mp4  --> conservado: assets/media/niko/videos/antiguo_00006406-VIDEO-2026-02-11-11-47-12.mp4
+- assets/media/niko/videos/antiguo_00006557-VIDEO-2026-02-11-17-02-48.mp4  --> conservado: assets/media/niko/videos/antiguo_00006556-VIDEO-2026-02-11-17-02-45.mp4
+- assets/media/niko/videos/antiguo_00007463-VIDEO-2026-02-19-13-31-03.mp4  --> conservado: assets/media/niko/videos/antiguo_00007462-VIDEO-2026-02-19-13-31-01.mp4
+- assets/media/niko/videos/antiguo_00007614-VIDEO-2026-02-22-21-17-29.mp4  --> conservado: assets/media/niko/videos/antiguo_00007613-VIDEO-2026-02-22-21-17-24.mp4
+- assets/media/niko/videos/antiguo_00009137-VIDEO-2026-03-31-09-21-55.mp4  --> conservado: assets/media/niko/videos/antiguo_00009136-VIDEO-2026-03-31-09-21-52.mp4
+- assets/media/niko/photos/antiguo_00009276-PHOTO-2026-04-03-21-32-13.jpg  --> conservado: assets/media/niko/photos/antiguo_00009275-PHOTO-2026-04-03-21-32-12.jpg
+- assets/media/niko/videos/antiguo_00009497-VIDEO-2026-04-08-20-50-38.mp4  --> conservado: assets/media/niko/videos/antiguo_00009496-VIDEO-2026-04-08-20-50-35.mp4
+- assets/media/niko/videos/antiguo_00010289-VIDEO-2026-05-09-22-48-57.mp4  --> conservado: assets/media/niko/videos/antiguo_00010288-VIDEO-2026-05-09-22-48-55.mp4
+- assets/media/niko/videos/nuevo_00000603-VIDEO-2026-07-23-17-14-57.mp4  --> conservado: assets/media/niko/videos/nuevo_00000602-VIDEO-2026-07-23-17-14-46.mp4
+- assets/media/niko/videos/nuevo_00001051-VIDEO-2026-07-31-02-06-00.mp4  --> conservado: assets/media/niko/videos/nuevo_00001050-VIDEO-2026-07-31-02-05-58.mp4
+- assets/media/niko/videos/nuevo_00001706-VIDEO-2026-08-18-20-07-48.mp4  --> conservado: assets/media/niko/videos/nuevo_00001705-VIDEO-2026-08-18-20-07-32.mp4
+- assets/media/niko/videos/nuevo_00001746-VIDEO-2026-08-19-16-11-47.mp4  --> conservado: assets/media/niko/videos/nuevo_00001745-VIDEO-2026-08-19-16-11-45.mp4
+- assets/media/niko/videos/nuevo_00001795-VIDEO-2026-08-19-20-34-02.mp4  --> conservado: assets/media/niko/videos/nuevo_00001794-VIDEO-2026-08-19-20-33-59.mp4
+- assets/media/niko/videos/nuevo_00001835-VIDEO-2026-08-20-20-57-30.mp4  --> conservado: assets/media/niko/videos/nuevo_00001834-VIDEO-2026-08-20-20-57-28.mp4

@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#132947"/>
+    <stop offset="1" stop-color="#08111F"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="148" y1="120" x2="370" y2="382" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FFF1B8"/>
+    <stop offset="0.52" stop-color="#F0CF75"/>
+    <stop offset="1" stop-color="#D8AA47"/>
+  </linearGradient>
+  <filter id="shadow" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feDropShadow dx="0" dy="18" stdDeviation="25" flood-color="#000000" flood-opacity="0.34"/>
+  </filter>
+</defs>
+
+<g filter="url(#shadow)">
+  <circle cx="256" cy="256" r="204" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="204" stroke="#F0CF75" stroke-opacity="0.55" stroke-width="8"/>
+  <circle cx="256" cy="256" r="185" stroke="white" stroke-opacity="0.08" stroke-width="2"/>
+</g>
+
+<!-- crown -->
+<path d="M160 178L205 219L256 162L307 219L352 178L373 259H139L160 178Z" fill="url(#gold)" stroke="#F7E5A4" stroke-width="5" stroke-linejoin="round"/>
+<rect x="154" y="255" width="204" height="24" rx="12" fill="url(#gold)"/>
+
+<!-- moon -->
+<path d="M218.105 184.012C202.742 194.908 193 213.08 193 233.527C193 266.638 219.862 293.5 252.973 293.5C270.662 293.5 286.56 285.832 297.539 273.644C288.04 278.571 277.249 281.359 265.806 281.359C227.462 281.359 196.375 250.271 196.375 211.927C196.375 201.072 198.863 190.798 203.301 181.646C207.398 181.367 212.508 182.198 218.105 184.012Z" fill="#FFF7D7"/>
+
+<!-- star -->
+<path d="M313.5 121L320.026 138.184L338.5 144.5L320.026 150.816L313.5 168L306.974 150.816L288.5 144.5L306.974 138.184L313.5 121Z" fill="#F7E7A7"/>
+
+<!-- initials -->
+<text x="256" y="363" text-anchor="middle" fill="#FFF8E8" font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="700" letter-spacing="8">MP</text>
+<text x="256" y="400" text-anchor="middle" fill="#D7C084" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="6">MI PRÍNCIPE</text>
+</svg>
